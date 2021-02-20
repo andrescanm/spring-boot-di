@@ -10,9 +10,13 @@ import com.capirona.springboot.di.app.models.service.IServicio;
 @Controller
 public class IndexController {
 	
-	@Autowired
 	private IServicio servicio;
 	
+	@Autowired
+	public IndexController(IServicio servicio) {
+		this.servicio = servicio;
+	}
+
 	@GetMapping({"", "/", "index"})
 	public String index(Model model) {
 		model.addAttribute("objeto", servicio.operacion());
