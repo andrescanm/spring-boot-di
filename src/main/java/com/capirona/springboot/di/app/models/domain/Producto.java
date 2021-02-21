@@ -2,15 +2,20 @@ package com.capirona.springboot.di.app.models.domain;
 
 public class Producto {
 
-	private String nonbre;
+	private String nombre;
 	private Integer precio;
 
-	public String getNonbre() {
-		return nonbre;
+	public Producto(String nombre, Integer precio) {
+		this.nombre = nombre;
+		this.precio = precio;
 	}
 
-	public void setNonbre(String nonbre) {
-		this.nonbre = nonbre;
+	public String getNombre() {
+		return nombre;
+	}
+
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
 	}
 
 	public Integer getPrecio() {
